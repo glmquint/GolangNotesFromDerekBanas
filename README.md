@@ -3,8 +3,6 @@
 
 Following [this](https://www.youtube.com/watch?v=YzLrWHZa-Kc) tutorial by Derek Banas
 
----
-
 ## Installation of a new version
 
 Follow instructions in [here](https://go.dev/doc/install)
