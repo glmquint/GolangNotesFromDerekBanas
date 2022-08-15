@@ -1063,4 +1063,56 @@ func main() {
     pl(r.ReplaceAllString(reStr2, "Dog"))
 }
 ```
-#checkpoint @03:06:09
+
+## Automated Testing
+
+> Tests make sure that the code continues to work as we're developing it
+
+In a new go module (app2, after `go mod init app2`) we have two files:
+- `testemail.go` with the functionality that we're developing
+- `testemail_test.go` with the testcases
+
+```go:testemail.go
+package app2
+
+import (
+    "fmt"
+    "regexp"
+)
+
+func IsEmail(s string) (string, error) {
+    r, _ := regexp.Compile(`[\w._%+-]{1,20}@[\w.-]{2,20}\.[A-Za-z]{2,3}`)
+    if r.MatchString(s) {
+        return "Valid Email", nil
+    } else {
+        return "", fmt.Errorf("not a valid email")
+    }
+}
+
+```
+
+```go:testemail_test.go
+package app2
+import("testing")
+
+func TestIsEmail(t *testing.T){
+    _, err := IsEmail("hello")
+    if err == nil {
+        t.Error("hello is not an email") // PASS
+    }
+    _, err = IsEmail("glmquint@gmail.com")
+    if err != nil {
+        t.Error("glmquint@gmail.com is an email") // FAIL
+    }
+    _, err = IsEmail("glmquint@gmail")
+    if err == nil {
+        t.Error("glmquint@gmail is not an email") // FAIL
+    }
+}
+```
+
+In the app2 directory we can then use the command `go test -v` to execute all tests in the `*_test.go` file
+
+## web app
+
+
