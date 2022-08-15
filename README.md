@@ -898,6 +898,7 @@ Then, in the main app, we use them as follows:
 You don't actually have to define that a type is gonna use a specifi interface. All you need to to is implement the functions and everything is automatic (that the type is gonna implement the interface)
 
 ## Concurrency (GoRoutines)
+----------------
 
 Simply add `go` before a function and it will operate on a different thread (goroutine)
 
@@ -926,6 +927,7 @@ You need to put a sleep on the main thread, or all its children will be terminat
 Being on different threads, you can no longer expect in what order this functions will execute
 
 ### Channels
+----------------
 
 > Channels allow different go routines to comunicate
 
@@ -961,6 +963,7 @@ func main() {
 Now the values will always be in order
 
 ### Mutex
+----------------
 
 A lock for mutually exclusive access operations
 
@@ -998,6 +1001,7 @@ func main() {
 ```
 
 ## Clojures
+----------------
 
 > Clojures are functions that don't have to be associated with an identifier, but often are associated with variables
 
@@ -1016,6 +1020,7 @@ func main() {
 Note how clojures **can** change values outside of the function
 
 ### Passing functions
+----------------
 
 You can pass functions to a function
 
@@ -1034,6 +1039,7 @@ func main() {
 ```
 
 ## Regex
+----------------
 
 ```go
 package main
@@ -1065,6 +1071,7 @@ func main() {
 ```
 
 ## Automated Testing
+----------------
 
 > Tests make sure that the code continues to work as we're developing it
 
@@ -1112,7 +1119,4 @@ func TestIsEmail(t *testing.T){
 ```
 
 In the app2 directory we can then use the command `go test -v` to execute all tests in the `*_test.go` file
-
-## web app
-
 
