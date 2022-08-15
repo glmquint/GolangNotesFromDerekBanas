@@ -1,5 +1,5 @@
 # GOLANG tutorial
-----------------
+
 
 Following [this](https://www.youtube.com/watch?v=YzLrWHZa-Kc) tutorial by Derek Banas
 
@@ -10,7 +10,7 @@ Following [this](https://www.youtube.com/watch?v=YzLrWHZa-Kc) tutorial by Derek 
 Follow instructions in [here](https://go.dev/doc/install)
 
 ## Syntax
-----------------
+
 
 Simplest Hello World:
 
@@ -113,7 +113,7 @@ func main() {
 ```
 
 ### casting
-----------------
+
 ```go
     cV1:=1.5
     cV2:= int(cV1)
@@ -137,7 +137,7 @@ func main() {
 `fmt.Sprintf("%f", 3.14)`
 
 ### if conditional
-----------------
+
 
 ```go
     iAge := 8
@@ -154,7 +154,7 @@ func main() {
 ```
 
 ### strings
-----------------
+
 
 ```go
     sV1 := "A word" // an array of bytes
@@ -175,7 +175,7 @@ func main() {
 ```
 
 ### runes
-----------------
+
 
 ```go
 package main
@@ -197,7 +197,7 @@ func main() {
 ```
 
 ### time
-----------------
+
 
 ```go
     now := time.Now()
@@ -206,7 +206,7 @@ func main() {
 ```
 
 ### random values
-----------------
+
 
 ```go
 package main
@@ -228,7 +228,7 @@ func main() {
 ```
 
 ### math
-----------------
+
 
 Most common math operators (after `import("math")`)
 
@@ -247,7 +247,7 @@ Most common math operators (after `import("math")`)
 `math.Pi`
 
 ### for loops
-----------------
+
 
 ```go
     // for initialization; condition; postStatement {BODY}
@@ -257,7 +257,7 @@ Most common math operators (after `import("math")`)
 ```
 
 ### while loops
-----------------
+
 
 ```go
 for true {
@@ -271,7 +271,7 @@ for true {
 ```
 
 ### range
-----------------
+
 
 ```go
     aNums :=  []int{1, 2, 3}
@@ -281,7 +281,7 @@ for true {
 ```
 
 ### arrays
-----------------
+
 
 > A collection of values with the same data-type
 
@@ -332,7 +332,7 @@ You are allowed to change the values in an array, but you're not allowed to chan
 ```
 
 ### slices
-----------------
+
 
 They're like arrays but the **can** grow
 
@@ -381,7 +381,7 @@ They're like arrays but the **can** grow
 ```
 
 ### functions
-----------------
+
 
 ```go
 func sayHello() {
@@ -539,7 +539,7 @@ func main() {
 ```
 
 ### file IO
-----------------
+
 
 File creation:
 ```go
@@ -608,12 +608,12 @@ File append:
 ```
 
 ### Command Line
-----------------
+
 
 Accessible with `os.Args` as an array of strings
 
 ## Packages
-----------------
+
 
 In a new directory (`app`) we use the command `go mod init example/project` to create a new go module named `example/project`
 
@@ -639,7 +639,7 @@ We can simply use them as `fmt.Println("Hello", stuff.Name)` or `strArr := stuff
 
 
 ## Maps
-----------------
+
 
 > Collection of key-value pairs.
 > Key can be any data-type that can be compared using ==
@@ -669,7 +669,7 @@ We can simply use them as `fmt.Println("Hello", stuff.Name)` or `strArr := stuff
 ```
 
 ## Generics
-----------------
+
 
 > With Generics we can specify the datatype to be used at a later time
 > It's mainly used when we want functions that can operate on multiple datatypes
@@ -692,7 +692,7 @@ func main() {
 ```
 
 ## Struct
-----------------
+
 
 > They allow to store values with many different datatypes in a very structured way
 
@@ -768,7 +768,7 @@ func main() {
 ```
 
 ## Defined Types
-----------------
+
 
 ```go
 type Tsp float64
@@ -801,7 +801,7 @@ func main() {
 But there's a better way to do it!
 
 ### Associate Methods
-----------------
+
 
 ```go
 type Tsp float64
@@ -823,10 +823,10 @@ func main() {
 ```
 
 ## Protecting Data 
-----------------
+
 
 ### Encapsulation
-----------------
+
 
 In our package we create a struct and some getter and setter functions to access the private data (lowercase components of struct)
 ```go
@@ -891,14 +891,14 @@ Then, in the main app, we use them as follows:
 ```
 
 ### Interfaces
-----------------
+
 
 > Interfaces allow us to create contracts that say that if anything inherit them, they must implement some predefined methods
 
 You don't actually have to define that a type is gonna use a specifi interface. All you need to to is implement the functions and everything is automatic (that the type is gonna implement the interface)
 
 ## Concurrency (GoRoutines)
-----------------
+
 
 Simply add `go` before a function and it will operate on a different thread (goroutine)
 
@@ -927,7 +927,7 @@ You need to put a sleep on the main thread, or all its children will be terminat
 Being on different threads, you can no longer expect in what order this functions will execute
 
 ### Channels
-----------------
+
 
 > Channels allow different go routines to comunicate
 
@@ -963,7 +963,7 @@ func main() {
 Now the values will always be in order
 
 ### Mutex
-----------------
+
 
 A lock for mutually exclusive access operations
 
@@ -1001,7 +1001,7 @@ func main() {
 ```
 
 ## Clojures
-----------------
+
 
 > Clojures are functions that don't have to be associated with an identifier, but often are associated with variables
 
@@ -1020,7 +1020,7 @@ func main() {
 Note how clojures **can** change values outside of the function
 
 ### Passing functions
-----------------
+
 
 You can pass functions to a function
 
@@ -1039,7 +1039,7 @@ func main() {
 ```
 
 ## Regex
-----------------
+
 
 ```go
 package main
@@ -1071,7 +1071,7 @@ func main() {
 ```
 
 ## Automated Testing
-----------------
+
 
 > Tests make sure that the code continues to work as we're developing it
 
